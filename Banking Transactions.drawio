@@ -1,0 +1,37 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="-hhJ1WLtvVvGkri3YxGq">
+    <mxGraphModel dx="1099" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-14" edge="1" parent="1" source="M-WvjKIAjOHVuR7IzdMH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M-WvjKIAjOHVuR7IzdMH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" value="&lt;div&gt;SAMPLE INPUT&lt;/div&gt;&lt;div&gt;sample_transactions.json&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Transaction ID&lt;/div&gt;&lt;div&gt;Account ID&lt;/div&gt;&lt;div&gt;Transaction Type&lt;/div&gt;&lt;div&gt;Amount&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="190" x="305" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;div&gt;PYTHON PRODUCER&lt;/div&gt;&lt;div&gt;bank_producer.py&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Reads JSON records&lt;/div&gt;&lt;div&gt;Adds UTC timestamp&lt;/div&gt;&lt;div&gt;Publishes transaction events&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="310" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-16" edge="1" parent="1" source="M-WvjKIAjOHVuR7IzdMH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M-WvjKIAjOHVuR7IzdMH-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;APACHE KAFKA&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Topic: bank-transactions&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Streams transaction events&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="590" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-9" edge="1" parent="1" source="M-WvjKIAjOHVuR7IzdMH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="M-WvjKIAjOHVuR7IzdMH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="&lt;div&gt;PYTHON CONSUMER&lt;/div&gt;&lt;div&gt;bank_consumer.py&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Consumes Kafka events&lt;/div&gt;&lt;div&gt;Validates transaction fields&lt;/div&gt;&lt;div&gt;Checks type and amount&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="590" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;div&gt;CSV OUTPUT&lt;/div&gt;&lt;div&gt;bank_transactions.csv&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Transaction details&lt;/div&gt;&lt;div&gt;Event timestamp&lt;/div&gt;&lt;div&gt;Processing status&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="910" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="M-WvjKIAjOHVuR7IzdMH-15" edge="1" parent="1" source="M-WvjKIAjOHVuR7IzdMH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.428;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;" target="M-WvjKIAjOHVuR7IzdMH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
